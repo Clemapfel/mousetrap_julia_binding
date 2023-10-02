@@ -71,7 +71,7 @@ add_library(${LIBRARY_NAME} SHARED
     cpp/icon.cpp
     cpp/image.cpp
     cpp/image_display.cpp
-        cpp/orientation.cpp
+    cpp/orientation.cpp
     cpp/justify_mode.cpp
     cpp/key_codes.cpp
     cpp/key_event_controller.cpp
@@ -123,7 +123,7 @@ add_library(${LIBRARY_NAME} SHARED
     cpp/viewport.cpp
     cpp/widget.cpp
     cpp/window.cpp
-        cpp/gl_canvas.cpp
+    cpp/gl_canvas.cpp
 )
 
 target_link_libraries(${LIBRARY_NAME} PUBLIC
