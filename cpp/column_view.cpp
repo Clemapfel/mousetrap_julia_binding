@@ -30,6 +30,7 @@ void implement_column_view(jlcxx::Module& module)
     .add_type_method(ColumnView, get_column_at)
     .add_type_method(ColumnView, get_column_with_title)
     .add_type_method(ColumnView, has_column_with_title)
+	.add_type_method(ColumnView, remove_row, !)
     .method("set_widget_at!", [](ColumnView& view, ColumnView::Column& column, uint64_t row_i, void* widget){
         view.set_widget_at(column, row_i, *((Widget*) widget));
     })

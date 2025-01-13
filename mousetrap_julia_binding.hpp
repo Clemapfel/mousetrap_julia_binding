@@ -48,7 +48,7 @@ static inline jl_value_t* jl_get_property(jl_value_t* object, const char* proper
 template<typename... Ts>
 static inline jl_value_t* jl_wrap(Ts... args)
 {
-    auto* wrap = jl_eval_string("(args...) -> args");
+    static auto* wrap = jl_eval_string("(args...) -> args");
     return jl_calln(wrap, args...);
 }
 

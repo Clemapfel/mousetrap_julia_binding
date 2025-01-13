@@ -1,5 +1,5 @@
 project('mousetrap_julia_binding', 'cpp',
-    version: '0.3.2',
+    version: '0.3.5',
     default_options : ['cpp_std=c++17']
 )
 add_project_arguments([
@@ -164,7 +164,7 @@ MOUSETRAP_JULIA_BINDING_SOURCES = [
 MOUSETRAP_JULIA_BINDING_LIBRARY = library('mousetrap_julia_binding',
     sources: MOUSETRAP_JULIA_BINDING_SOURCES,
     dependencies: [MOUSETRAP, CXXWRAP, ADWAITA],
-    version: '0.3.0',
+    version: '0.3.5',
     include_directories: ['cpp', JULIA_INCLUDE_DIRS],
     install: true
 )
@@ -177,6 +177,6 @@ pkgconfig.generate(
     name: 'libmousetrap_julia_binding',
     filebase: 'mousetrap_julia_binding',
     description: 'C++-to-Julia interface of Mousetrap.jl',
-    url: 'https://github.com/clemapfel/mousetrap_julia_binding'#,
+    url: 'https://github.com/HyperSphereStudio/mousetrap_julia_binding'#,
     #requires: [MOUSETRAP.name(), CXXWRAP.name(), GTK4.name(), ADWAITA.name()]
 )
